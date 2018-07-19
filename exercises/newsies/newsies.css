@@ -1,0 +1,38 @@
+p {
+    display: inline-block;
+    width: 30%;
+    text-align: left;
+}
+
+.classifieds {
+    display: block;
+    float: right;
+    border-style: double;
+    text-align: center;
+    float: right;
+
+}
+
+header {
+    color: red;
+    font-size: 90px;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+}
+
+img {
+    height: 150px;
+    width: 220px;
+}
+
+html {
+    background-color: lightblue;
+}
+
+#myBlock {
+    display: block;
+    border: dashed;
+    text-align: center;
+    float: right;
+}
