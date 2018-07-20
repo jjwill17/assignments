@@ -47,3 +47,69 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
         console.log("not old enought")
       }
     }    // Still need to figure this one out
+
+
+// Loop Olympics assignment
+for (var i = 0; i < 10; i++) {
+  console.log(i)
+}
+
+for (var i = 9; i >= 0; i--) {
+  console.log(i)
+}
+
+// Bronze Medal
+
+var arr = []
+for (var i = 0; i < 9; i++) {
+  console.log(arr.push(i))
+}
+
+for (var i = 0; i < 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i)
+  }
+}
+
+var fruit = ["banana", "orange", "apple", "kiwi", "pear", "peach"]
+
+for (var i = 0; i < fruit.length; i+=2) {
+  console.log(fruit[i])
+}
+
+
+// Silver Medal
+
+var peopleArray = [  
+  {
+    name: "Harrison Ford",
+    occupation: "Actor"
+  },
+  {
+    name: "Justin Bieber",
+    occupation: "Singer"
+  },
+  {
+    name: "Vladimir Putin",
+    occupation: "Politician"
+  },
+  {
+    name: "Oprah",
+    occupation: "Entertainer"
+  }
+]
+
+for (var i = 0; i < peopleArray.length; i++) {
+  console.log(peopleArray[i].name)
+}
+
+
+// Using the same array as above
+
+var names = []
+var occupation = []
+
+for (var i = 0; i < peopleArray.length; i++) {
+  peopleArray[i].name = names
+  console.log(names.push)
+}
