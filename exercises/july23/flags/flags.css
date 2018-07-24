@@ -1,0 +1,93 @@
+.franceFlag {
+    width:456px;
+    height:275px;
+    background: blue;
+	position: static;
+	z-index: 1;
+}
+
+.france1 {
+    display: inline-block;
+    width: 157px;
+    height: 275px;
+    background: white;
+    position: relative;
+    bottom: 0px;
+    left: 150px;
+    z-index: 2;
+}
+
+.france2 {
+    display: inline-block;
+    width: 149px;
+    height: 275px;
+    background: red;
+    position: relative;
+    bottom: 0px;
+    left: 146px;
+    z-index: 3;
+}
+
+.germanyFlag {
+    top: 3px;
+    display: block;
+    width:456px;
+    height:275px;
+    background: black;
+	position: relative;
+	z-index: 1;
+}
+
+.germany1 {
+    display: inline-block;
+    width: 456px;
+    height: 91px;
+    background: red;
+    position: relative;
+    top: 89px;
+    left: 0px;
+    z-index: 2;
+}
+
+.germany2 {
+    display: inline-block;
+    width: 456px;
+    height: 95px;
+    background: yellow;
+    position: relative;
+    top: 85px;
+    left: 0px;
+    z-index: 2;
+}
+
+.madagascar {
+    top: 8px;
+    display: inline-block;
+    width:456px;
+    height:275px;
+    background: green;
+	position: relative;
+	z-index: 1;
+}
+
+.madag1 {
+    display: inline-block;
+    width: 157px;
+    height: 275px;
+    background: white;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+.madag2 {
+    display: block;
+    width: 456px;
+    height: 138px;
+    background: red;
+    position: relative;
+    bottom: 279px;
+    left: 0px;
+    z-index: 2;
+}
