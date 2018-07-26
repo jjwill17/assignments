@@ -1,0 +1,76 @@
+body {
+    font-family: "Helvetica Neue", cursive, sans-serif;
+    color: rgb(252, 102, 2);
+    background: lightblue;
+    text-align: center;
+    font-size: 20px;
+    background-image: url(http://havanesepuppies.us/wp-content/uploads/2018/03/puppies-high-quality-backgrounds-and-hd-pictures-of-for-iphone-resolution.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;  /* This part shows me how to put a background image */
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+
+}
+
+ul.navbar {
+    background: bisque;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.fake-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.welcome {
+    display: inline-block;
+    text-decoration: underline;
+    background: rgb(238, 190, 100);
+}
+
+.code-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.list {
+    clear: both;
+    list-style-position: inside;
+}

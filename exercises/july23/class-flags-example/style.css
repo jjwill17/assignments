@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    height: 200px; 
+    width: 300px;
+    background-color: #eee;
+    margin-top: 10px;
+}
+
+#f-red {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    background-color: red;
+    right: 0;
+} 
+
+#f-white {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    background-color: white;
+    right: 100px;
+}
+
+#f-blue {
+    position: absolute;
+    height: 200px;
+    width: 100px; 
+    background-color: blue;
+}

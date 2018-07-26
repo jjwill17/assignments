@@ -1,0 +1,13 @@
+#my-list {
+    width: 100px;
+    height: 200px;
+    background-color: #ddd;
+}
+
+.box {
+    color: green
+}
+
+#my-sample-id {
+    text-transform: uppercase;
+}

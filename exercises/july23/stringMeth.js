@@ -95,3 +95,17 @@ function combineAndSlice(str1, str2, str3){
   }
   
   whatIsSubstr("Hello ", "World ")  //Will output "Hello W"
+
+// Using both a string method (split()) and an array method (splice())
+// to pull out the name 'Albert' from a string and put my name in its place
+
+var str = "Hello my name is Albert"
+var arr = str.split(" ")
+console.log(arr)
+
+function rename(arr){   
+  arr.splice(4,1, "Justin")   
+  return arr.join(" ")  // This will return the array back into a string
+} 
+
+rename(arr)
