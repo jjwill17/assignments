@@ -1,0 +1,49 @@
+div {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+div.div1 {
+    display: inline-block;
+    margin-left: 259px;
+    background-color: lightskyblue;
+}
+
+div.div2 {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 259px;
+    background-color: lightcoral;
+}
+
+div.div3 {
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 259px;
+    background-color: lightgreen;
+    padding-left: 13px;
+}
+
+
+/* #answer1 {
+    display: inline;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: lightskyblue;
+}
+
+#answer2 {
+    display: inline;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: orange;
+}
+
+#answer3 {
+    display: inline;
+
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: lightcoral;
+} */
