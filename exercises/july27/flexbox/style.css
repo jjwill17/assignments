@@ -1,0 +1,19 @@
+.container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    height: 500px;
+    flex-direction: row; /* can also be a column and can be reversed - reverse-row */
+    justify-content: space-evenly; /* can also center it with this command */
+    padding: 10px;
+    align-items: center;
+}
+
+.container > div {
+    flex: 1;  /* this is a fraction */
+}
+
+@media only screen and (max-width: 450px){
+    .container {
+        flex-direction: column;
+    }
+}
