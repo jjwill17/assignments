@@ -24,6 +24,7 @@ html, body {
 
 h1 {
   color: rgba(105, 98, 98, 0.836);
+  width: auto;
   text-align: left;
   margin-left: 15px;
   margin-top: 25px;
@@ -74,18 +75,20 @@ h1 {
 .buttons:hover {
     background: red;
 }
-    
+
+@media only screen and (max-width: 710px){
+  h1 { 
+    font-size: 5em;
+    margin-top: 80px; 
+ }
+}
+
 @media only screen and (max-width: 500px){
   .container {
       flex-direction: column;
       margin-top: 75px;
       align-items: normal;
   }
-
-  h1 { 
-    font-size: 5em;
-    margin-top: 80px; 
- }
 
   .lorem {
     font-size:larger;
