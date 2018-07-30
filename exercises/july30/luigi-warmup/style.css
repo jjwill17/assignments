@@ -1,0 +1,57 @@
+@font-face {
+    font-family: superMario256;
+    src: url(SuperMario256.ttf);
+}
+
+.container {
+    display: flex;
+    font-family: superMario256;
+    color: red;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    flex-direction: row;
+    padding-top: 20px;
+    background-color: yellow;
+    padding-left: 20px;
+    height: 50px;
+}
+
+
+.main {
+    background: red;
+    justify-content: center;
+}
+
+.main img {
+    height: 150px;
+    width: 150px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.about {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+}
+
+#secondP {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.footer {
+    flex-direction: row-reverse;
+    background: yellow;
+}
+
+.footer img {
+    height: 50px;
+    width: 50px;
+}
