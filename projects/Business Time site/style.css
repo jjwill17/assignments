@@ -1,0 +1,93 @@
+.container > div {
+  padding: 5px;
+  text-align: center;
+  font-size: 2em;
+  color: #bb7a03;
+  transform: skewX(-20deg);
+}
+
+nav div a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  transform: skewX(20deg);
+}
+  
+html, body {  
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url("PhotoBizBkgnd.jpeg") no-repeat center top fixed;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+h1 {
+  color: rgba(105, 98, 98, 0.836);
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 25px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150px;
+}
+  
+.lorem {
+  color: rgb(240, 228, 228);
+  text-align: left;
+  margin-left: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  
+}
+
+.container > div:nth-child(1) {
+  background-color: #FFC5BA;    
+}
+  
+.container > div:nth-child(2) {
+  background-color: #E89C99;
+}
+  
+.container > div:nth-child(3) {
+  background-color: #FF9CBD;
+}
+
+.container > div:nth-child(4) {
+  background-color: #E899D7;
+}
+
+.container {
+        display: flex;
+        height: 50px;
+        flex-direction: row; /* can also be a column and can be reversed - reverse-row */
+        justify-content: space-evenly; /* can also center it with this command */
+        padding: 10px;
+        align-items: center;
+}
+    
+.container > div {
+    flex: 1;  /* this is a fraction */
+}
+
+.buttons:hover {
+    background: red;
+}
+    
+@media only screen and (max-width: 500px){
+  .container {
+      flex-direction: column;
+      margin-top: 75px;
+      align-items: normal;
+  }
+
+  h1 { 
+    font-size: 5em;
+    margin-top: 80px; 
+ }
+
+  .lorem {
+    font-size:larger;
+  }
+}
