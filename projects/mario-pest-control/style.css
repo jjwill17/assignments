@@ -1,32 +1,16 @@
-/* #background {
-    width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    left: 0px; 
-    top: 0px; 
-    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too.
+@font-face {
+    font-family: superMario256;
+    src: url(SuperMario256.ttf);
 }
-
-.stretch {
-    width:100%;
-    height:100%;
-}
-body {
-    background-image: url("mushkingdom-copy.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-} */
 
 h1 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "superMario256";
     color: white;
     font-size: 50px;
 }
 
 h2 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "superMario256";
     color: white;
     margin-bottom: 10px;
 }
@@ -35,10 +19,6 @@ body {
     background: url("mushkingdom\(original\).png") no-repeat center top;
     text-align: center;
 }
-
-/* #charImage {
-    background-size: cover;
-} */
 
 div {
     display: inline-block;

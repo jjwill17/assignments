@@ -1,6 +1,6 @@
 // This is the button click eventListener
 myForm.addEventListener("submit", function (event) {
-
+    event.preventDefault();
     // We need to pull input and generate a total
     var goombaInput = document.querySelector("input[name='individual']").value
 
@@ -8,7 +8,6 @@ myForm.addEventListener("submit", function (event) {
 
     var cheepInput = document.querySelector("input[name='individual3']").value
 
-    event.preventDefault();
     // Now we need to put all the vars above into a function and add them up
     var sumOfVars = (+goombaInput * 5) + (+bobombInput * 7) + (+cheepInput * 11)
     document.getElementById("output").innerHTML = sumOfVars + " Coins!";
