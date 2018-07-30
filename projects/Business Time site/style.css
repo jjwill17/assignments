@@ -76,11 +76,11 @@ span > a {
 }
     
 .container > div {
-    flex: 1;  /* this is a fraction */
+    flex: 1; 
 }
 
-.buttons:hover {
-    background: red;
+nav div a:hover {
+  background: orange;
 }
 
 .photos {
