@@ -89,7 +89,7 @@ span > a {
   background-color: #E899D7;
 }
 
-nav div a:hover {
+.container div:hover {
   background: orange;
 }
 
