@@ -108,24 +108,22 @@ div > img {
     margin-top: 80px; 
  }
 
- div > img {
+  div > img {
   height: 250px;
   width: 400px;
-}
-
-}
-
-@media only screen and (max-width: 500px){
-  .container {
-      flex-direction: column;
-      margin-top: 75px;
-      align-items: normal;
   }
+
+  .container {
+    flex-direction: column;
+    margin-top: 75px;
+    align-items: normal;
+}
 
   .lorem {
     font-size:larger;
   }
 
 }
+
 
 
