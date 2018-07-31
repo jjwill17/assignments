@@ -63,6 +63,16 @@ span > a {
   
 }
 
+.footer {
+  color: rgb(240, 228, 228);
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
 .container > div:nth-child(1) {
   background-color: #FFC5BA;    
 }
