@@ -8,7 +8,7 @@ myForm.addEventListener("submit", function (event) {
 
     var cheepInput = document.querySelector("input[name='individual3']").value
 
-    // Now we need to put all the vars above into a function and add them up
+    // Now we need to put all the vars above into another var and add them up
     var sumOfVars = (+goombaInput * 5) + (+bobombInput * 7) + (+cheepInput * 11)
     document.getElementById("output").innerHTML = sumOfVars + " Coins!";
 })
