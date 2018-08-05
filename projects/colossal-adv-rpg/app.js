@@ -13,13 +13,31 @@ var ask = require("readline-sync")
 // Start off with greeting and asking player their name
 var namePlayer = ask.question("Welcome chosen person. What ye be called? ")
 
-var options = ["walk", "run", "go to the bathroom"]
+var options = ["walk", "run", "go to the bathroom", "inventory"]
+var fightOpt = ["fight", "run"]
+
 var option = ""
+var fightOption = ""
 
 var player = { 
-    name: "me",
+    name: namePlayer,
     health: 100
 }
+
+var enemy = [
+    {
+        name: "Monster",
+        health: 100
+    },
+    {
+        name: "Gus",
+        health: 100
+    },
+    {
+        name: "Fring",
+        health: 100
+    }
+]
 
 var inventory = {
     item1: "stuf",
@@ -33,13 +51,13 @@ function walk(){
         // if random number is 3
         if(randomNum === 3){
             //fight function goes here
-            console.log("FIGHT!!!")
+            fight()
         // if random number is not 3
         } else {
             console.log("Hey, lucky you. You didn't run into a monster!")
-        }  
-    } else {
-        console.log(`You have this stuff in your inventory: ${inventory}, your health is ${player.health}. Please push "w" to walk forward.`)
+        }
+    } else if (option === 3) {     // This part of the function isn't running correctly
+        console.log(`${player.name} you have this stuff in your inventory: ${inventory}, your health is ${player.health}. Please push "w" to walk forward.`)
     }
 }
 
@@ -48,16 +66,26 @@ function run(){
     if(randomNum === 2){
         console.log("Hey... you got away. Good for you. Now continue walking.")
     } else {
-        console.log("Oops, can't run right now.")
+        console.log("Oops, you stubbed you toe so I guess no running for you right now.")
     }
 }
 
 function fight(){
-
+    fightOption = ask.keyInSelect(fightOpt, "Quick! Wanna fight or try and run?: ")
+    enemyCreation()
+    if(option === 1){
+        run()
+    } else {
+        attackEnemy()
+    }
+    while (enemy.health > 0){
+        enemyAttack()
+        attackEnemy()
+    }
 }
 
 function attackEnemy(){
-
+    return enemy.health - 25 
 }
 
 function enemyAttack(){
@@ -73,7 +101,16 @@ function enemyDie(){
 }
 
 function enemyCreation(){
-
+    var randomNum = Math.floor((Math.random() * 3))
+    var enemy1
+    if(randomNum === 0){
+        var enemy1 = enemy[0]
+    } else if (randomNum === 1){
+        var enemy1 = enemy[1]
+    } else {
+        var enemy1 = enemy[2]
+    }
+    return enemy1
 }
 
 while(player.health > 0){
