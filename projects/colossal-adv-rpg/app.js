@@ -85,7 +85,9 @@ function fight(){
 }
 
 function attackEnemy(){
-    return enemy.health - 25 
+    return enemy.health - 25
+    // should create a variable inside of fight() that grabs monster health 
+    // instead of manipulating the original. i.e. currBaddyHealth -= 25
 }
 
 function enemyAttack(){
@@ -102,15 +104,15 @@ function enemyDie(){
 
 function enemyCreation(){
     var randomNum = Math.floor((Math.random() * 3))
-    var enemy1
+    var newEnemy
     if(randomNum === 0){
-        var enemy1 = enemy[0]
+        var newEnemy = enemy[0]
     } else if (randomNum === 1){
-        var enemy1 = enemy[1]
+        var newEnemy = enemy[1]
     } else {
-        var enemy1 = enemy[2]
+        var newEnemy = enemy[2]
     }
-    return enemy1
+    return newEnemy
 }
 
 while(player.health > 0){
