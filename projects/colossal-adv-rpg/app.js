@@ -1,18 +1,7 @@
-// List of actions to create in console RPG game:
-// character creation
-// walking
-// running from a fight
-// fighting
-// enemy creation
-// attacking enemy
-// enemy attacking player
-// enemy dying (including dropping an item)
-// character dying
 
-
-///////////////
-// Variables //
-///////////////     ///////////////////////////////////////////////////////////////////////////////////////////
+///////////////     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Variables //     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var ask = require("readline-sync")
 // Start off with greeting and asking player their name
@@ -52,9 +41,9 @@ var inventory = {
     item: ""
 }
 
-//////////////////
-// My Functions //
-//////////////////  ////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////  /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// My Functions //  /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////  /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function walk(){
     // ask user to push "w" for walk. keycode for "w" is 119. "W" is 87.
@@ -69,6 +58,21 @@ function walk(){
             console.log("Hey, lucky you. You didn't run into an enemy!\n")
         }
     }
+}
+
+
+
+function enemyCreation(){
+    var randomNum = Math.floor((Math.random() * 3))
+    var newEnemy
+    if(randomNum === 0){
+        var newEnemy = enemy[0]
+    } else if (randomNum === 1){
+        var newEnemy = enemy[1]
+    } else {
+        var newEnemy = enemy[2]
+    }
+    return newEnemy
 }
 
 
@@ -158,39 +162,24 @@ function enemyAttack(){
 
 
 
+function enemyDie(){
+    console.log(`You defeated ${newEnemy.name}! You also get some health back and an item!`)
+    inventory["item"] = "sword"
+    return player.health += 15
+}
+
+
+
 function die(){
     if(player.health <= 0){
     console.log("Oh crap, you died in a ball of flames")
     }
 }
 
+//////////////////////////      ////////////////////////////////////////////////////////////////////////////////////////////////
+// Main Game While Loop //      ////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////      ////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-function enemyDie(){
-    console.log(`You defeated ${newEnemy.name}! You also get some health back and an item!`)
-    inventory["item"] = "sword"
-    return player.health += 15
-    // Need to also have enemy drop item that will be added into inventory
-}
-
-
-
-function enemyCreation(){
-    var randomNum = Math.floor((Math.random() * 3))
-    var newEnemy
-    if(randomNum === 0){
-        var newEnemy = enemy[0]
-    } else if (randomNum === 1){
-        var newEnemy = enemy[1]
-    } else {
-        var newEnemy = enemy[2]
-    }
-    return newEnemy
-}
-
-//////////////////////////
-// Main Game While Loop //
-//////////////////////////      ////////////////////////////////////////////////////////////////////////////////
 // Original while loop:
 // while(player.health > 0){
 //     option = ask.keyInSelect(options, "What would you like to do?: ")
@@ -202,7 +191,7 @@ function enemyCreation(){
 //         console.log(`${player.name} you have this stuff in your inventory: ${inventory.item}, your health is ${player.health}. Please push "w" to walk forward.`)
 //     }
 // }
-// die()
+// console.log("GAME OVER")
 
 while(player.health > 0){
     option = ask.question("Push 'w' and then 'enter' to walk:\n Type 'print' then press 'enter' to see inventory: ")
