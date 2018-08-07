@@ -113,10 +113,10 @@ function attackEnemy(){
     if (attackOption === 0){
         var randomNum = Math.floor((Math.random() * 2) + 1)
         if(randomNum === 2){
-            attackPower = 50
+            attackPower = 30
             console.log(`${newEnemy.name} has ${newEnemy.health}HP. You just slapped it across the face and took off 40HP!`)
         } else if (randomNum === 1){
-            attackPower = 25
+            attackPower = 20
             console.log(`${newEnemy.name} has ${newEnemy.health}HP. You just punched it in the head and took off 25HP!`)
         } else {
             attackPower = 10
