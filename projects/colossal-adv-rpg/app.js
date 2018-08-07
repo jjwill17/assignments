@@ -5,7 +5,7 @@
 
 var ask = require("readline-sync")
 // Start off with greeting and asking player their name
-var namePlayer = ask.question("Welcome chosen person.\n You are about to embarque on a great adventure that will test your limits and patience(mostly your patience...) You start with 100HP and will probably run into some enemies along your way. Choose to fight, you may come out victorious and get something in return. Should you choose to run... well, you'll see. Now, what is your name?: ")
+var namePlayer = ask.question("Welcome chosen person.\n You are about to embark on a great adventure that will test your limits and patience(mostly your patience...) You start with 100HP and will probably run into some enemies along your way. Choose to fight, you may come out victorious and get something in return. Should you choose to run... well, you'll see. Now, what is your name?: ")
 
 // var options = ["walk", "go to the bathroom", "inventory"]
 var fightOpt = ["run", "fight"]
@@ -198,7 +198,7 @@ while(player.health > 0){
     if(option === "w"){
         walk()
     } else if (option === "p"){
-        console.log("You pooped your pants.\n")
+        console.log("This button literally does nothing.\n")
     } else if (option === "print"){
         console.log(`${player.name} you have this stuff in your inventory: ${inventory.item}, your health is ${player.health}.\n`)
     }
