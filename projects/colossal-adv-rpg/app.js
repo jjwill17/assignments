@@ -16,7 +16,7 @@
 
 var ask = require("readline-sync")
 // Start off with greeting and asking player their name
-var namePlayer = ask.question("Welcome chosen person. You are about to embarque on a great adventure that will test your limits and patience(mostly your patience...) Now, what is your name?: ")
+var namePlayer = ask.question("Welcome chosen person. You are about to embarque on a great adventure that will test your limits and patience(mostly your patience...) You start with 100HP and will probably run into some enemies along your way. Choose to fight, you may come out victorious and get something in return. Should you choose to run... well, you'll see. Now, what is your name?: ")
 
 // var options = ["walk", "go to the bathroom", "inventory"]
 var fightOpt = ["run", "fight"]
@@ -66,7 +66,7 @@ function walk(){
             fight()
         // if random number is not 3
         } else {
-            console.log("Hey, lucky you. You didn't run into a monster!\n")
+            console.log("Hey, lucky you. You didn't run into an enemy!\n")
         }
     }
 }
@@ -76,9 +76,11 @@ function walk(){
 function run(){
     var randomNum = Math.floor((Math.random() * 2) + 1)
     if(randomNum === 2){
-        console.log("Hey... you got away. Good for you. Now continue walking.\n")
+        console.log("Hey... you got away. But not completely unscathed. Now continue walking.\n")
+        enemyAttack()
     } else {
-        console.log("Oops, you stubbed you toe so I guess no running for you right now.\n")
+        console.log("Oops, you stubbed you toe so I guess no running for you right now... and you got attacked on top of that.\n")
+        enemyAttack()
         return false
     }
 }
@@ -86,7 +88,7 @@ function run(){
 
 
 function fight(){
-    fightOption = ask.keyInSelect(fightOpt, "Uh oh, an enemy approached! Wanna fight or try to run?: ")
+    fightOption = ask.keyInSelect(fightOpt, `Uh oh, an enemy approached! It's ${newEnemy.name}! Wanna fight or try to run?: `)
     var running = run()
     if(fightOption === 0){
         if(running === false){
@@ -98,8 +100,12 @@ function fight(){
         while (newEnemy.health > 0 && player.health > 0){     
             attackEnemy()
             enemyAttack()
+            if(newEnemy.health <= 0){
+                enemyDie()
+            } else if (player.health <= 0){
+                die()
+            }
         }
-        enemyDie()
     }
 }
 
@@ -204,4 +210,4 @@ while(player.health > 0){
         console.log(`${player.name} you have this stuff in your inventory: ${inventory.item}, your health is ${player.health}.\n`)
     }
 }
-die()
+console.log("Game Over")
