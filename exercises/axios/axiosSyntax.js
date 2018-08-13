@@ -7,7 +7,7 @@
     // 5. The server sends a response back to the web page
     // 6. The response is then read by javascript
 
-// var axios = require('axios')
+var axios = require('axios')
 
 // Read - 
 axios.get('https://swapi.co/api/people').then(function(response){
