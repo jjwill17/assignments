@@ -13,11 +13,26 @@ class Player {
     }
     gotHit(){
       if(this.status === "Powered Up"){
-          return "Big"
-      } else if(this.status === )
+            return this.status = "Big"
+        } else if(this.status === "Big"){
+            return this.status = "Small"
+        } else if(this.status === "Small"){
+            return this.status = "Dead"
+        }
     }
     gotPowerup(){
-  
+        if(this.status === "Small"){
+            return this.status = "Big"
+        } else if(this.status === "Big"){
+            return this.status = "Powered Up"
+        }
+    }
+    gameActive(){
+        if(this.status !== "Dead"){
+            return true
+        } else {
+            return false
+        }
     }
     addCoin(){
         totalCoins++
