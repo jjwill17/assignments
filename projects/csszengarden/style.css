@@ -1,0 +1,29 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px 70px 20px 70px;
+}
+
+header[role=banner] {
+    background-image: url("huntington.jpg");
+    background-size: 1000px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(238, 236, 236);
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    color: rgb(238, 236, 236);
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif
+}

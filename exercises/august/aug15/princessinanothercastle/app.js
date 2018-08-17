@@ -54,4 +54,6 @@ function whatHappens(){
     }
 }
   
-const setInterval = () => 
+const setInterval = () => {
+    
+}
