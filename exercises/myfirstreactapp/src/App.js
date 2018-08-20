@@ -8,7 +8,7 @@ import { HelloWorld, Cool, Awesome, JellyDonuts } from './HelloWorld'
 const App = () => {
     return (
         <div>
-            <HelloWorld/>
+            <HelloWorld />
             <Cool />
             <Awesome />
             <JellyDonuts />

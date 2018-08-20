@@ -1,11 +1,30 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    padding: 20px 70px 20px 70px;
+    padding: 20px 70px 20px 70px; 
+    padding: 0;
+    margin: 0;
+}
+
+body a {
+    color: rgb(87, 157, 185);
+    text-decoration: none;
+}
+
+p {
+    font-size: 17px;
+    line-height: 30px;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+
 }
 
 header[role=banner] {
-    background-image: url("huntington.jpg");
+    padding: 20px 0px 80px 0px;
+    background-image: url(contours.png),
+        url(noise.png), url(gridlines.png), url(huntington.jpg);
     background-size: 1000px;
+    background-attachment: fixed, fixed, fixed, scroll;
 }
 
 h1 {
@@ -17,13 +36,25 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 19px;
     color: rgb(238, 236, 236);
     font-style: italic;
     text-align: center;
-    margin-top: 10px;
+    margin-top: -20px;
 }
 
 h3 {
-    font-family: Arial, Helvetica, sans-serif
+    text-transform: uppercase;
+    padding-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+div.participation, div.benefits {
+    padding: 10px;
+    background-color: rgb(177, 211, 177);
+    background-image: url('gridlines-opaque.png'),
+                url('contours-opaque.png'),
+                url('bamboo.png');
+    background-attachment: scroll, scroll, fixed;
 }
