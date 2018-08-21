@@ -1,5 +1,6 @@
 import React from 'react'
-import Background from './batman.jpg';
+import Background from './batman.jpg'
+import PropTypes from 'prop-types'
 
 const Box = (props) => {
     const styles = {
@@ -36,6 +37,12 @@ const Section = () => {
       <section style={sectionStyle}>
       </section>
     )
+}
+
+Box.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    info: PropTypes.string.isRequired
 }
 
 export {
