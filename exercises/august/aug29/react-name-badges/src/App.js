@@ -1,6 +1,6 @@
 import React from 'react'
-// import InfoBox from './InfoBox'
-// import DisplayCard from './DisplayCard'
+import InfoBox from './InfoBox'
+import DisplayBadge from './DisplayBadge'
 
 class App extends React.Component {
     constructor(){
@@ -45,20 +45,10 @@ class App extends React.Component {
     
     render(){
 
-        const formStyle = {
+        const divStyle = {
             margin: '10px',
             border: '3px solid black',
             borderRadius: '10px'
-        }
-
-        const inputStyles = {
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gridGap: '10px',
-            marginLeft: '35%',
-            marginRight: '20%',
-            width: '25%',
-            padding: '1%'
         }
 
         const buttonStyle = {
@@ -68,17 +58,20 @@ class App extends React.Component {
         }
 
         return (
-            <form style={formStyle}>
-                <div style={inputStyles}>
-                    <input type='text' name='firstName' value={this.state.firstName} placeholder="First Name" onChange={this.handleChange}></input>
-                    <input type='text' name='lastName' value={this.state.lastName} placeholder="Last Name" onChange={this.handleChange}></input>
-                    <input type='text' name='email' value={this.state.email} placeholder="email" onChange={this.handleChange}></input>
-                    <input type='text' name='birthPlace' value={this.state.birthPlace} placeholder="Place of Birth" onChange={this.handleChange}></input>
-                    <input type='number' name='phone' value={this.state.phone} placeholder="Phone Number" onChange={this.handleChange}></input>
-                    <input type='text' name='favFood' value={this.state.favFood} placeholder="Favorite Food" onChange={this.handleChange}></input>
-                </div>
-                
+            <form onSubmit={this.handleSubmit}>
+                <div style={divStyle}>
+                <InfoBox 
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                    email={this.state.email}
+                    birthPlace={this.state.birthPlace}
+                    phone={this.state.phone}
+                    favFood={this.state.favFood}
+                    handleChange={this.handleChange}
+                />    
                 <button style={buttonStyle}>Submit</button>
+                </div>
+                <div>{this.state.data.map(each => <DisplayBadge {...each} />)}</div>
             </form>
         )
     }
