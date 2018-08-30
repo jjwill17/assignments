@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100vw;
+    height: 40px;
+    background-color: #3339;
+    color: #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+}
+
+.home,
+.contact,
+.about {
+    height: 480px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.home {
+    background-color: dodgerblue;    
+}
+
+.contact {
+    background-color: violet;
+}
+
+
+.about {
+    background-color: powderblue;
+}
+
+.footer {
+    height: 30px;
+    background-color: #3339;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    height: 480px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 480px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service-detail-container {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

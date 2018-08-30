@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+.app-container {
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.list-container {
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.card-container {
+    border: 1px solid black; 
+    margin: 5px
+}
