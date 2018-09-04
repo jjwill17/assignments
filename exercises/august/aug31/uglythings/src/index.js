@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import store from './redux'
-import { Providor } from 'react-redux'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
-    <Providor store={ store }>
+    <Provider store={ store }>
         <App />
-    </Providor>
+    </Provider>
 , document.getElementById('root'))

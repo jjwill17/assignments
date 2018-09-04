@@ -20,3 +20,4 @@ import { removeContact } from '../redux'
             // 1: What do you want from state object      2:  What actions do you want from your redux folder
 export default connect(state=>state, { removeContact })(Display)
 
+
