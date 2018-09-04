@@ -50,7 +50,7 @@ class App extends React.Component {
             border: '3px solid black',
             borderRadius: '10px'
         }
-
+        
         const buttonStyle = {
             marginLeft: '46%',
             marginRight: 'auto',
