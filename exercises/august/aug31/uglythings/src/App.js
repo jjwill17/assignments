@@ -41,7 +41,7 @@ class App extends React.Component {
                 <Form 
                     title={this.state.title} 
                     img={this.state.img} 
-                    escription={this.state.description} 
+                    description={this.state.description} 
                     handleSubmit={this.handleSubmit} 
                     handleChange={this.handleChange} />
                 <div>{this.state.data.map(info => <Display {...info}/>)}</div>
