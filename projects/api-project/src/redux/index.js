@@ -1,9 +1,20 @@
 import { createStore, applyMiddleware } from 'redux'
+import React from 'react'
 import axios from 'axios'
 import thunk from 'redux-thunk'
 import apiKey from '../apiKey'
 
+
+// Need to take this out
+const data = props => {
+    console.log(props.title)
+    return (
+        <div>{props.title}</div>
+    )
+}
+
 const initState = {
+    reduxKey: 'This is from the redux file',
     movieData: []
 }
 

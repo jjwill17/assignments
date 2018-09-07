@@ -4,10 +4,11 @@ import { connect } from 'react-redux'
 import Display from './Display'
 
 class Movies extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             title: '',
+            moviesKey: this.props.reduxKey,
             list: []
         }
     }
@@ -33,6 +34,7 @@ class Movies extends React.Component {
         return (
             <div>
                 <input type='text' name='title' value={this.state.title} placeholder='Title of the movie...' onChange={this.handleChange}/>
+                <div>{this.state.moviesKey}</div>
                 <button onClick={this.handleClick}>Get Data</button>
                 <div>{this.state.list.map(info => <Display {...info} />)}</div>
             </div>
