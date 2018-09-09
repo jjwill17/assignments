@@ -2,6 +2,7 @@ import React from 'react'
 import { getData } from '../redux'
 import { connect } from 'react-redux'
 import ShowCurrent from './ShowCurrent'
+import '../app.css'
 
 class NowPlaying extends React.Component {
     constructor(){
@@ -22,18 +23,14 @@ class NowPlaying extends React.Component {
     }
 
     render(){
-        const upcoming = {
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
-            gridGap: '10px',
-            justifyItems: 'center',
-            padding: '1%'
+        const buttonStyle = {
+            marginTop: '40px'
         }
         return (
             <div>
-                <button onClick={this.handleClick}>Now Playing</button>
+                <button onClick={this.handleClick} style={buttonStyle}>Now Playing</button>
                 <div>Number of Movies Currently Playing: {this.state.nowPlaying.length}</div>
-                <div style={upcoming}>{this.state.nowPlaying.map(currentMovie => <ShowCurrent {...currentMovie}/>)}</div>
+                <div className='upcoming'>{this.state.nowPlaying.map(currentMovie => <ShowCurrent {...currentMovie}/>)}</div>
             </div>
         )
     }

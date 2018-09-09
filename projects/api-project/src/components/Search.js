@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import SearchResults from './SearchResults'
 import axios from 'axios'
 import apiKey from '../apiKey'
+import '../app.css'
 
 class Search extends React.Component {
     constructor(){
@@ -44,19 +45,17 @@ class Search extends React.Component {
     }
 
     render(){
-        const results = {
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr 1fr',
-            gridGap: '40px',
-            justifyItems: 'center',
-            padding: '1%'
+
+        const textBox = {
+            marginTop: '40px'
         }
+
         return (
             <div>
-                <input type='text' name='title' value={this.state.title} placeholder='Title of the movie...' onChange={this.handleChange}/>
+                <input type='text' name='title' value={this.state.title} placeholder='Title of the movie...' onChange={this.handleChange} style={textBox}/>
                 <div>{this.state.moviesKey}</div>
                 <button onClick={this.handleMovieSelect}>Get Data</button>
-                <div style={results}>{this.state.list.map(info => <SearchResults {...info} />)}</div>
+                <div className='searchResults'>{this.state.list.map(info => <SearchResults {...info} />)}</div>
             </div>
         )
     }

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../app.css'
 
 const ShowCurrent = props => {
 
@@ -12,18 +13,13 @@ const ShowCurrent = props => {
         textDecoration: 'underline'
     }
 
-    const imgStyle = {
-        height: 'auto',
-        maxWidth: '500px'
-    }
-
     return (
         <div style={movieStyle}>
             <h2 style={title}>{props.title}</h2>
             <h3>Release Date: {props.release_date}</h3>
             <h3>Average Vote: {props.vote_average}</h3>
             <h3>Number of Votes: {props.vote_count}</h3>
-            <img src={poster} style={imgStyle}/>
+            <img src={poster} className='imgStyle'/>
         </div>
     )
 }
