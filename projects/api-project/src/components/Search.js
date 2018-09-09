@@ -4,15 +4,13 @@ import { connect } from 'react-redux'
 import SearchResults from './SearchResults'
 import axios from 'axios'
 import apiKey from '../apiKey'
-import NowPlaying from './NowPlaying'
 
-class Movies extends React.Component {
+class Search extends React.Component {
     constructor(){
         super()
         this.state = {
             title: '',
-            list: [],
-            nowPlaying: []
+            list: []
         }
     }
 
@@ -37,7 +35,6 @@ class Movies extends React.Component {
                 list: response.data.Search
             })
         })
-        this.props.getData()
     }
 
      handleClick = () => {
@@ -53,11 +50,9 @@ class Movies extends React.Component {
                 <div>{this.state.moviesKey}</div>
                 <button onClick={this.handleMovieSelect}>Get Data</button>
                 <div>{this.state.list.map(info => <SearchResults {...info} />)}</div>
-                <button onClick={this.handleClick}>Now Playing</button>
-                <div>Number of Movies Currently Playing: {this.state.nowPlaying.length}{this.state.nowPlaying.map(currentMovie => <NowPlaying {...currentMovie}/>)}</div>
             </div>
         )
     }
 }
 
-export default connect(state=>state, { getData })(Movies)
+export default connect(state=>state, { getData })(Search)

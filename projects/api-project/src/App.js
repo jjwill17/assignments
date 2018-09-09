@@ -1,20 +1,23 @@
 import React from 'react'
-import Form from './components/Form'
-import Display from './components/SearchResults'
-import Movies from './components/Movies'
-import { connect } from 'react-redux'
-import { getData } from './redux'
+import Navbar from './Navbar'
+import Home from './components/Home'
+import Search from './components/Search'
+import NowPlaying from './components/NowPlaying'
+import { Switch, Route } from 'react-router-dom'
 import './app.css'
 
-class App extends React.Component {
+const App = () => {
 
-    render(){
-        return (
-            <div className='app'>
-                <Movies />
-            </div>
-        )
-    }
+    return (
+        <div className='app'>
+            <Navbar />
+            <Switch>
+                <Route exact path="/" component={ Home } />
+                <Route path="/search" component={ Search } />
+                <Route path="/nowPlaying" component={ NowPlaying } />
+            </Switch>
+        </div>
+    )
 }
 
-export default connect(state=>state, { getData })(App)
+export default App
