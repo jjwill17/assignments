@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url("izayah-ramos-778080-unsplash.jpg") no-repeat center fixed;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: white;
+}

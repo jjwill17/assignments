@@ -1,8 +1,9 @@
 import React from 'react'
+import '../app.css'
 
 const Home = () => {
     const styles = {
-        backgroundColor: "orange",
+        color: 'rgb(232, 142, 142)',
         marginTop: "0",
         marginBottom: "0",
         padding: "200px 200px 200px 200px",
@@ -10,7 +11,10 @@ const Home = () => {
         borderRadius: "25px 0 25px 0"
     }
     return (
-        <h2 style={styles}>This is the Home page</h2>
+        <div style={styles}>
+            <h1>MovieSearch</h1>
+            <h2>Search for Movies and See What is Currently Playing</h2>
+        </div>
     )
 }
 

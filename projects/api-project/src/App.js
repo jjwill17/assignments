@@ -9,7 +9,7 @@ import './app.css'
 const App = () => {
 
     return (
-        <div className='app'>
+        <div>
             <Navbar />
             <Switch>
                 <Route exact path="/" component={ Home } />

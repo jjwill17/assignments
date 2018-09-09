@@ -44,12 +44,19 @@ class Search extends React.Component {
     }
 
     render(){
+        const results = {
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr 1fr',
+            gridGap: '40px',
+            justifyItems: 'center',
+            padding: '1%'
+        }
         return (
             <div>
                 <input type='text' name='title' value={this.state.title} placeholder='Title of the movie...' onChange={this.handleChange}/>
                 <div>{this.state.moviesKey}</div>
                 <button onClick={this.handleMovieSelect}>Get Data</button>
-                <div>{this.state.list.map(info => <SearchResults {...info} />)}</div>
+                <div style={results}>{this.state.list.map(info => <SearchResults {...info} />)}</div>
             </div>
         )
     }

@@ -22,10 +22,18 @@ class NowPlaying extends React.Component {
     }
 
     render(){
+        const upcoming = {
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gridGap: '10px',
+            justifyItems: 'center',
+            padding: '1%'
+        }
         return (
             <div>
                 <button onClick={this.handleClick}>Now Playing</button>
-                <div>Number of Movies Currently Playing: {this.state.nowPlaying.length}{this.state.nowPlaying.map(currentMovie => <ShowCurrent {...currentMovie}/>)}</div>
+                <div>Number of Movies Currently Playing: {this.state.nowPlaying.length}</div>
+                <div style={upcoming}>{this.state.nowPlaying.map(currentMovie => <ShowCurrent {...currentMovie}/>)}</div>
             </div>
         )
     }

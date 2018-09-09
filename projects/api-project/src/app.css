@@ -1,5 +1,65 @@
-.app {
+/* .app {
     background: cornflowerblue;
     height: 300px;
     max-width: auto;
-}
+} */
+
+.navbar {
+    display: flex;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    align-items: center;
+    transform: skewX(20deg);
+
+    /* position: fixed; This is to make the bar fixed, but need to restylize with @media
+    margin-top: -120px;
+    width: 90%; */
+  } 
+
+  .home {
+    flex: 1;
+    font-size: 2em;
+    background-color: #6A2CE8;
+    color: white;
+    text-decoration: none;
+    transform: skewX(-20deg);    
+  }
+    
+  .search {
+    flex: 1;
+    font-size: 2em;
+    background-color: #263AFF;
+    color: white;
+    text-decoration: none;
+    transform: skewX(-20deg);
+  }
+    
+  .nowPlaying {
+    flex: 1;
+    font-size: 2em;
+    background-color: #2385E8;
+    color: white;
+    text-decoration: none;
+    transform: skewX(-20deg);
+  }
+  
+  /* Hover Styles */
+  .home:hover {
+    background: orange;
+  }
+
+  .search:hover {
+    background: orange;
+  }
+
+  .nowPlaying:hover {
+    background: orange;
+  }
