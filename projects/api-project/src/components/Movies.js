@@ -1,17 +1,18 @@
 import React from 'react'
 import { getData } from '../redux'
 import { connect } from 'react-redux'
-import Display from './Display'
+import SearchResults from './SearchResults'
 import axios from 'axios'
 import apiKey from '../apiKey'
+import NowPlaying from './NowPlaying'
 
 class Movies extends React.Component {
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state = {
             title: '',
-            moviesKey: this.props.reduxKey,
-            list: []
+            list: [],
+            nowPlaying: []
         }
     }
 
@@ -36,26 +37,24 @@ class Movies extends React.Component {
                 list: response.data.Search
             })
         })
+        this.props.getData()
     }
 
-     // handleClick = () => {
-    //     this.setState({
-    //         list: this.props.movieData
-    //     })
-    // }
-
-    // componentDidMount(){
-    //     this.props.getData()
-    // }
+     handleClick = () => {
+        this.setState({
+            nowPlaying: this.props.currentMovies
+        })
+    }
 
     render(){
-        console.log(this.state)
         return (
             <div>
                 <input type='text' name='title' value={this.state.title} placeholder='Title of the movie...' onChange={this.handleChange}/>
                 <div>{this.state.moviesKey}</div>
                 <button onClick={this.handleMovieSelect}>Get Data</button>
-                <div>{this.state.list.map(info => <Display {...info} />)}</div>
+                <div>{this.state.list.map(info => <SearchResults {...info} />)}</div>
+                <button onClick={this.handleClick}>Now Playing</button>
+                <div>Number of Movies Currently Playing: {this.state.nowPlaying.length}{this.state.nowPlaying.map(currentMovie => <NowPlaying {...currentMovie}/>)}</div>
             </div>
         )
     }

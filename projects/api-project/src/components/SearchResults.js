@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Display = props => {
+const SearchResults = props => {
     return (
         <div>
             <h1>{props.Title}</h1>
@@ -10,4 +10,4 @@ const Display = props => {
     )
 }
 
-export default Display
+export default SearchResults

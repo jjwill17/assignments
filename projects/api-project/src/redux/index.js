@@ -1,29 +1,19 @@
 import { createStore, applyMiddleware } from 'redux'
-import React from 'react'
 import axios from 'axios'
 import thunk from 'redux-thunk'
-import apiKey from '../apiKey'
+import secondApiKey from '../secondApiKey'
 
-
-// Need to take this out
-const data = props => {
-    console.log(props.title)
-    return (
-        <div>{props.title}</div>
-    )
-}
 
 const initState = {
-    reduxKey: 'This is from the redux file',
-    movieData: []
+    currentMovies: []
 }
 
 export const getData = () => {
     return dispatch => {
-        axios.get(`http://www.omdbapi.com/?apikey=${apiKey.key}&s=star_wars`).then(response => {
+        axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${secondApiKey.key}`).then(response => {
             dispatch({
-                type: 'GET_MOVIES',
-                movies: response.data.Search
+                type: 'GET_CURRENT_MOVIES',
+                movies: response.data.results
             })
         })
     }
@@ -31,9 +21,9 @@ export const getData = () => {
 
 const reducer = (prevState = initState, action) => {
     switch(action.type){
-        case 'GET_MOVIES':
+        case 'GET_CURRENT_MOVIES':
             return {
-                movieData: action.movies
+                currentMovies: action.movies
             }
         default:
             return prevState

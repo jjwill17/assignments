@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from './components/Form'
-import Display from './components/Display'
+import Display from './components/SearchResults'
 import Movies from './components/Movies'
 import { connect } from 'react-redux'
 import { getData } from './redux'
