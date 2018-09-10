@@ -2,7 +2,9 @@
 myForm.addEventListener("submit", function (event) {
     event.preventDefault();
     // We need to pull input and generate a total
-    var goombaInput = document.querySelector("input[name='individual']").value
+    // var goombaInput = document.querySelector("input[name='individual']").value
+    var goombaInput = document.getElementById("individual").value
+    console.log(goombaInput)
 
     var bobombInput = document.querySelector("input[name='individual2']").value
 
