@@ -52,7 +52,7 @@
   }
 
   .homeText {
-    color: rgb(232, 142, 142);
+    color: rgb(196, 165, 236);
     font-size: 3em;
     margin-top: 0;
     margin-bottom: 0;
@@ -75,6 +75,11 @@
 .imgStyle {
   height: 'auto';
   max-width: '450px';
+}
+
+searchImgStyle {
+  height: 'auto';
+  max-width: '100px';
 }
 
 .upcoming {
