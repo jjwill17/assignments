@@ -1,9 +1,7 @@
 const express = require('express')
 const bobaServer = express()
-const bodyParser = require('body-parser')
+const bountyRoutes = express.Router()
 const uuid = require('uuid/v4')
-
-bobaServer.use(bodyParser.json())
 
 const bounties = [
     {
@@ -40,8 +38,8 @@ const bounties = [
     }
 ]
 
-// GET WHOLE ARRAY
-bobaServer.get('/bounties', (req, res) => {
+// GET WHOLE ARRAY OR SPECIFIC QUERIED BOUNTY
+bountyRoutes.get('/', (req, res) => {
     const queriedBounties = bounties.filter(person => {
         if(person.bountyAmt < req.query.maxamount){
             return person
@@ -52,32 +50,30 @@ bobaServer.get('/bounties', (req, res) => {
     res.send(queriedBounties)
 })
 
-// GET A SINGLE BOUNTY
-bobaServer.get('/bounties/:id', (req, res) => {
+// GET SPECIFIC BOUNTY 
+bountyRoutes.get('/:id', (req, res) => {
     const singleBounty = bounties.find(person => person.id === req.params.id)
     res.send(singleBounty)
 })
 
 // POST
-bobaServer.post('/bounties', (req, res) => {
+bobaServer.post('/', (req, res) => {
     bounties.push({...req.body, id: uuid()})
     res.send(bounties)
 })
 
 // PUT
-bobaServer.put('/bounties/:id', (req, res) => {
+bobaServer.put('/:id', (req, res) => {
     const changeBounty = bounties.findIndex(person => person.id === req.params.id)
     bounties.splice(changeBounty, 1, req.body)
     res.send(bounties)
 })
 
 // DELETE
-bobaServer.delete('/bounties/:id', (req, res) => {
+bobaServer.delete('/:id', (req, res) => {
     const deleteBounty = bounties.findIndex(person => person.id === req.params.id)
     bounties.splice(deleteBounty, 1)
     res.send(bounties)
 })
 
-bobaServer.listen(4001, () => {
-    console.log("He's no good to me dead on any server other than 4001")
-})
+module.exports = bountyRoutes

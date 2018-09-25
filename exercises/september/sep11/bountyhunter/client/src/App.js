@@ -20,7 +20,10 @@ componentDidMount(){
 
     render(){
         return (
-            <div>{this.state.bountyApi.map(person => <h1>{person.firstName}</h1>)}</div>
+            <div>
+                <h1>Bounties</h1>
+                <div>{this.state.bountyApi.map(person => <h4>Name: {person.firstName} {person.lastName}</h4>)}</div>
+            </div>
         )
     }
 }

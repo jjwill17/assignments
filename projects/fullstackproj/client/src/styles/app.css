@@ -1,0 +1,224 @@
+@font-face { 
+    font-family: Aurebesh; 
+    src: url(Aurebesh\ Bold.ttf)
+}
+
+/* .siteName {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 20px;
+    font-size: 50px;
+    color: red;
+    font-weight: bolder;
+    text-decoration: none;
+} */
+
+.siteName {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-right: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(255, 196, 0), #a02f12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input {
+    border: 1px solid #848484;
+    border-radius: 12px;
+    outline: 0;
+    margin: auto;
+    height: 15px;
+    width: 250px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.about-h1 {
+    margin-top: 150px;
+    color: white;
+    font-weight: lighter;
+    -webkit-transition:  -webkit-transform 0.7s;
+    transition: transform 0.7s;
+}
+
+.about-h1:hover {
+    font-family: 'Aurebesh';
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.p-style {
+    margin-top: 100px;
+    color: white;
+    font-size: 60px;
+    font-weight: lighter;
+    /* -webkit-transition: -webkit-transform 0.7s;
+    transition: 0.7s; */
+}
+
+.p-style:hover {
+    font-family: 'Aurebesh';
+    font-size: 40px;
+    /* -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); */
+}
+
+.page-content {
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+}
+
+.about-page {
+    margin-top: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.search-page {
+    margin: auto;
+    padding: 15px;
+}
+
+.mapped {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px 10px;
+    padding-top: 20px;
+}
+
+.searched {
+    color: white;
+    background:  url(https://media.giphy.com/media/CCdcDo0G1qhnG/giphy.gif) no-repeat center center fixed; 
+    background-size: cover;
+    border-style: hidden;
+    border-width: 2px;
+    padding: 5px;
+}
+
+.navStyle {
+    display: flex;
+    background-color: #400706;
+    position: fixed;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.692);
+}
+
+.navbar-item {
+    text-align: center;
+    width: 115px;
+    padding: 15px;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-item:hover {
+    transition: .3s ease;
+    background: #ddd;
+    color: black;
+    font-weight: lighter;
+}
+
+.navbar-item:active {
+    background-color: #f5eb5c;
+}
+
+.add-button {
+    transition: .3s ease;
+    background-color: #747272;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    font-size: 15px;
+    margin: 4px 20px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    transition: .3s ease;
+    background: #ddd;
+    color: black;
+}
+
+.button {
+    transition: .3s ease;
+    background-color: #747272;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    font-size: 15px;
+    margin: 4px 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: .3s ease;
+    border-radius: 30px;
+    background: #ddd;
+    color: black;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    transform: translateY(5px);
+  }
+
+.delete-button {
+    transition: .3s ease;
+    background-color: #ddd;
+    border: none;
+    padding: 5px 15px;
+    color: black;
+    font-size: 10px;
+    margin: 4px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    transition: .3s ease;
+    background: red;
+    color: black;
+}
+
+@media only screen and (max-width:950px){
+    .mapped {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width:715px) {
+    .navStyle {
+        display: block;
+        position: absolute;
+    }
+
+    .navbar-item {
+        display: none;
+        width: auto;
+    }
+
+    .navStyle:hover .navbar-item {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:580px){
+    .input {
+        width: 80%;
+    }
+
+    .mapped {
+        grid-template-columns: auto;
+    }
+}

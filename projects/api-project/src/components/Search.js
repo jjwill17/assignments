@@ -31,18 +31,18 @@ class Search extends React.Component {
     
 
     componentDidMount = () => {
-        axios.get('http://www.omdbapi.com/?apikey=${apiKey.key}&s=star_wars').then(response => {
+        axios.get(`http://www.omdbapi.com/?apikey=${apiKey.key}&s=star_wars`).then(response => {
             this.setState({
                 list: response.data.Search
             })
         })
     }
 
-     handleClick = () => {
-        this.setState({
-            nowPlaying: this.props.currentMovies
-        })
-    }
+    //  handleClick = () => {
+    //     this.setState({
+    //         nowPlaying: this.props.currentMovies
+    //     })
+    // }
 
     render(){
 
