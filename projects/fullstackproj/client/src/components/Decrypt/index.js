@@ -27,8 +27,6 @@ class Decrypt extends React.Component {
         })
     }
 
-    // NOT WORKING .replace(/3/g, '1').replace(/4/g, '2').replace(/5/g, '3').replace(/6/g, '4').replace(/7/g, '5').replace(/8/g, '6').replace(/9/g, '7').replace(/0/g, '8').replace(/1/g, '9').replace(/2/g, '0')
-
     render(){
         const textStyle = {
             marginTop: '100px',

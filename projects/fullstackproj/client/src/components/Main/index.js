@@ -31,8 +31,6 @@ class Encrypt extends React.Component {
         })
     }
 
-//    NOT WORKING .replace(/'1'/g, '3').replace(/2/g, '4').replace(/3/g, '5').replace(/4/g, '6').replace(/5/g, '7').replace(/6/g, '8').replace(/7/g, '9').replace(/8/g, '0').replace(/9/g, '1').replace(/0/g, '2')
-
     // DATE CONSTRUCTION
     createDate = () => {
         let date = new Date()
