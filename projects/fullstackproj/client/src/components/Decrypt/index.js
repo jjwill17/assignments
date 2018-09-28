@@ -36,6 +36,7 @@ class Decrypt extends React.Component {
         }
 
         const decryptedStyle = {
+            wordWrap: 'break-word',
             color: 'white'
         }
         return (

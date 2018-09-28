@@ -1,0 +1,1 @@
+This app's purpose is to encrypt and decrypt text that is input. For right now, there is an option to save encrypted text to a database to access at later time. This came about because of a desire to encrypt some of my own text and not having a personal application I could use on hand.
