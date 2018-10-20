@@ -47,7 +47,7 @@ body a {
     grid-area: view;
     margin: 0;
     text-align: center;
-    padding-top: 89px;
+    padding-top: 88px;
     padding-bottom: 72px;
     background-image: url(contours.png),
         url(noise.png), url(gridlines.png), url(huntington.jpg);
@@ -59,7 +59,8 @@ body a {
     font-size: 22px;
     max-width: 250px;
     padding: 10px 5px 10px 5px;
-    margin-left: 30%;
+    margin-left: 27%;
+    margin-right: 30%;
     background-color: rgb(138, 138, 138);
     opacity: 0.5;
 }
