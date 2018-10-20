@@ -1,13 +1,138 @@
+
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "intr view"
+                         "intr side"
+                         "main side"
+                         "main side"
+                         "main side"
+                         "foot foot";
+}
+
+#files {
+    text-transform: uppercase;
+    padding: 4px;
+    color: #809b7e;
+}
+
+#links {
+    color: #0599c2
+}
+
+#files:hover {
+    transition: 0.3s;
+    background-color: rgb(32, 70, 105);
+    color: white;
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     padding: 20px 70px 20px 70px; 
     padding: 0;
     margin: 0;
+    
 }
 
 body a {
-    color: rgb(87, 157, 185);
+    color: whitesmoke;
     text-decoration: none;
+}
+
+.intro {
+    grid-area: intr;
+}
+
+.design-archives {
+    grid-area: view;
+    margin: 0;
+    text-align: center;
+    padding-top: 89px;
+    padding-bottom: 72px;
+    background-image: url(contours.png),
+        url(noise.png), url(gridlines.png), url(huntington.jpg);
+    background-size: 1500px;
+    background-attachment: fixed, fixed, fixed, scroll;
+}
+
+.viewall {
+    font-size: 22px;
+    max-width: 250px;
+    padding: 10px 5px 10px 5px;
+    margin-left: 30%;
+    background-color: rgb(138, 138, 138);
+    opacity: 0.5;
+}
+
+.indicator {
+    font-size: 35px;
+}
+
+.preamble {
+    grid-area: prea;
+}
+
+.main-supporting {
+    grid-area: main;
+}
+
+/* .ulStuff {
+    grid-area: side;
+} */
+
+/* .secondUlStuff {
+    grid-area: sid2
+} */
+
+/* .contentinfo {
+    grid-area: foot;
+} */
+
+.design-selection ul, .zen-resources ul {
+	margin: 0;
+}
+
+.design-selection li, .zen-resources li {
+	float: left;
+	width: 50%;
+	padding: 1.5em 10%;
+	border-top: solid 1px #d9e3dc;
+	color: #c0cac3;
+	font-style: italic;
+}
+
+.design-selection .design-name, .zen-resources a, li.viewall a {
+	display: block;
+	margin-bottom: 0.25em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.sidebar {
+    grid-area: side;
+	background: #edf4f0;
+}
+
+.sidebar h3 {
+    display: none;
+}
+
+.sidebar a {
+    color: #607476;
+    text-decoration: none;
+}
+
+.sidebar a:hover, .sidebar a:focus {
+	color: #49968e;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
 }
 
 p {
@@ -19,24 +144,24 @@ p {
 
 }
 
-header[role=banner] {
-    padding: 20px 0px 80px 0px;
+header {
+    padding-top: 20px;
     background-image: url(contours.png),
         url(noise.png), url(gridlines.png), url(huntington.jpg);
-    background-size: 1000px;
+    background-size: 1200px;
     background-attachment: fixed, fixed, fixed, scroll;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(238, 236, 236);
-    font-size: 40px;
+    font-size: 60px;
     font-weight: lighter;
     text-align: center;
 }
 
 h2 {
-    font-size: 19px;
+    font-size: 30px;
     color: rgb(238, 236, 236);
     font-style: italic;
     text-align: center;
@@ -57,4 +182,120 @@ div.participation, div.benefits {
                 url('contours-opaque.png'),
                 url('bamboo.png');
     background-attachment: scroll, scroll, fixed;
+}
+
+.byDavid {
+    grid-area: foot;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    color: rgba(255, 255, 255, 0.4);
+    background: #3e5d67;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto auto;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(contours.png), url(gridlines.png), url(noise.png), url(koi.jpg);
+    background-position: 0 0, -5px -25px, 0 0, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
+    background-image: url(contours@2x.png), url(gridlines.png), url(noise.png), url(koi.jpg);
+    background-size: 50% auto, auto, auto, cover;
+
+}
+
+#byLinks {
+    color: whitesmoke;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #134347;
+}
+
+.other-viewall {
+    font-size: 2px;
+}
+
+@media only screen and (max-width: 1100px){
+    .page-wrapper {
+        display: block;
+        /* grid-template-columns: 1fr 1fr;
+        grid-template-areas: "intr intr"
+                             "intr intr"
+                             "main main"
+                             "side side"
+                             "foot foot"; */
+    }
+
+    .design-archives {
+        margin: 0;
+        text-align: center;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        background-image: none;
+
+    }
+    
+    .viewall {
+        font-size: 1px;
+        max-width: 0px;
+        max-height: 0px;
+        padding: 0;
+        margin-left: 0%;
+        opacity: none;
+    }
+
+    .indicator {
+        font-size: 1px;
+    }
+
+    header {
+        padding-bottom: 0;
+    }
+
+    .ulStuff {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .other-viewall {
+        font-size: 20px;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgb(138, 138, 138);
+        opacity: 0.5;
+    }
+
+    body a {
+        color: whitesmoke;
+    }
+
+    .other-indicator {
+        font-size: 45px;
+        float: right;
+        color: white;
+    }
+
+    .secondUlStuff {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: rgb(177, 211, 177);
+        background-image: url('gridlines-opaque.png'),
+                url('contours-opaque.png'),
+                url('bamboo.png');
+        background-attachment: scroll, scroll, fixed;
+    }
 }
