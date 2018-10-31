@@ -19,7 +19,7 @@ const ShowCurrent = props => {
             <h3>Release Date: {props.release_date}</h3>
             <h3>Average Vote: {props.vote_average}</h3>
             <h3>Number of Votes: {props.vote_count}</h3>
-            <img src={poster} className='imgStyle'/>
+            <img src={poster} className='imgStyle' alt=''/>
         </div>
     )
 }

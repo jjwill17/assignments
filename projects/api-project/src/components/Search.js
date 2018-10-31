@@ -47,12 +47,13 @@ class Search extends React.Component {
     render(){
 
         const textBox = {
-            marginTop: '40px'
+            marginTop: '20px'
         }
 
         return (
             <div>
-                <input type='text' name='title' value={this.state.title} placeholder='Title of the movie...' onChange={this.handleChange} style={textBox}/>
+                <div className='instructions'>Type in a movie or TV Show name below to show it and all relevant movies and/or TV Shows</div>
+                <input type='text' name='title' value={this.state.title} placeholder='e.g. Star Wars' onChange={this.handleChange} style={textBox}/>
                 <div>{this.state.moviesKey}</div>
                 <button onClick={this.handleMovieSelect}>Get Data</button>
                 <div className='searchResults'>{this.state.list.map(info => <SearchResults {...info} />)}</div>

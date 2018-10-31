@@ -22,27 +22,40 @@
     /* position: fixed; This is to make the bar fixed, but need to restylize with @media
     margin-top: -120px;
     width: 90%; */
-  } 
+} 
 
-  .home {
+.home {
     flex: 1;
     font-size: 2em;
     background-color: #6A2CE8;
     color: white;
     text-decoration: none;
     transform: skewX(-20deg);    
-  }
+}
     
-  .search {
+footer {
+    color: rgb(218, 190, 255);
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+.search {
     flex: 1;
     font-size: 2em;
     background-color: #263AFF;
     color: white;
     text-decoration: none;
     transform: skewX(-20deg);
+}
+
+.instructions {
+    padding-left: 15%;
+    padding-right: 15%;
+    color: rgb(218, 190, 255);
+    font-size: 30px;
   }
     
-  .nowPlaying {
+.nowPlaying {
     flex: 1;
     font-size: 2em;
     background-color: #2385E8;
@@ -51,13 +64,13 @@
     transform: skewX(-20deg);
   }
 
-  .homeText {
-    color: rgb(196, 165, 236);
-    font-size: 3em;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 15px 50px 15px 50px;
-    text-align: center;
+.homeText {
+  color: rgb(218, 190, 255);
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px 50px 15px 50px;
+  text-align: center;
 }
 
 .homeText h2 {
@@ -77,7 +90,7 @@
   max-width: '450px';
 }
 
-searchImgStyle {
+.searchImgStyle {
   height: 'auto';
   max-width: '100px';
 }
@@ -103,6 +116,25 @@ searchImgStyle {
     background: orange;
   }
 
+  @media only screen and (max-width: 1400px){
+    .searchResults {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .upcoming {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  @media only screen and (max-width: 1050px){
+    .searchResults {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+  }
+
   @media only screen and (max-width: 750px){
   
     .navbar {
@@ -112,7 +144,7 @@ searchImgStyle {
     }
 
     .homeText {
-      font-size: 1.25em;
+      font-size: 1.65em;
       margin-top: 80px; 
       text-align: 'left';
       padding: 0 0 0 0;
@@ -121,9 +153,20 @@ searchImgStyle {
     .homeText h2 {
       /* margin-left: 0px;
       margin-right: 0px; */
-      font-size: 25px;
+      font-size: 22px;
       /* margin-left: 20px;
       max-width: 500px; */
+    }
+
+    footer {
+      font-size: 17px;
+    }
+
+    .instructions {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 20px;
+      padding-top: 40px;
     }
 
     .searchResults {
@@ -131,11 +174,6 @@ searchImgStyle {
       grid-template-columns: 1fr;
       justify-items: center;
       padding: 1%;
-    }
-
-    .upcoming {
-      display: grid;
-      grid-template-columns: 1fr;
     }
 
     .imgStyle {
