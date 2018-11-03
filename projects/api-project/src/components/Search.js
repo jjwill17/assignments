@@ -30,13 +30,13 @@ class Search extends React.Component {
     }
     
 
-    componentDidMount = () => {
-        axios.get(`http://www.omdbapi.com/?apikey=${apiKey.key}&s=star_wars`).then(response => {
-            this.setState({
-                list: response.data.Search
-            })
-        })
-    }
+    // componentDidMount = () => {
+    //     axios.get(`http://www.omdbapi.com/?apikey=${apiKey.key}&s=star_wars`).then(response => {
+    //         this.setState({
+    //             list: response.data.Search
+    //         })
+    //     })
+    // }
 
     //  handleClick = () => {
     //     this.setState({
@@ -55,7 +55,7 @@ class Search extends React.Component {
                 <div className='instructions'>Type in a movie or TV Show name below to show it and all relevant movies and/or TV Shows</div>
                 <input type='text' name='title' value={this.state.title} placeholder='e.g. Star Wars' onChange={this.handleChange} style={textBox}/>
                 <div>{this.state.moviesKey}</div>
-                <button onClick={this.handleMovieSelect}>Get Data</button>
+                {this.state.title !== '' ? <button onClick={this.handleMovieSelect}>Get Data</button>: '*Button will show upon inputting text'}
                 <div className='searchResults'>{this.state.list.map(info => <SearchResults {...info} />)}</div>
             </div>
         )
